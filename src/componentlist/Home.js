@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.css";
+import "bootstrap/dist/css/bootstrap.min.css"
+import { IoIosAddCircle } from "react-icons/io";
 
 function Home1()
 {
@@ -22,7 +24,9 @@ Your app is ready to be deployed!Builds the app for production to the build fold
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!</p>
+Your app is ready to be deployed
+<IoIosAddCircle/>
+!</p>
 
     )
 }
@@ -35,3 +39,12 @@ export const About10 = ()=>{
         </>
     )
 }
+export const MyButton=()=> {
+    return (
+      <button className="button">I'm a button</button>
+    
+      
+    );
+  }
+
+  

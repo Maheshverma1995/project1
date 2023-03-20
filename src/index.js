@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home1, { About10 } from './componentlist/Home';
+import Home1,{ About10 } from './componentlist/Home';
 import { About } from './componentlist/Home';
+import { MyButton } from './componentlist/Home';
+
 
 
 
@@ -11,6 +13,8 @@ root.render(
     <Home1 />
     <About />
     <About10 />
+    <MyButton/>
+    
   </React.StrictMode>
 );
 
