@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home1,{ About10 } from './componentlist/Home';
-import { About } from './componentlist/Home';
-import { MyButton } from './componentlist/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import About from './componentlist/About';
+import Contactus from './componentlist/Contactus';
+import Error from './componentlist/Error';
+import Landingpage from './componentlist/Landingpage';
+import Mynav from './componentlist/Mynav';
 
 
 
@@ -10,11 +13,15 @@ import { MyButton } from './componentlist/Home';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home1 />
-    <About />
-    <About10 />
-    <MyButton/>
-    
+ 
+    <BrowserRouter>
+    <Mynav></Mynav>
+        <Routes>
+           <Route path='' element={<Landingpage/>}/>
+           <Route path='about' element={<About/>}/>
+           <Route path='contact' element={<Contactus/>}/>
+           <Route path='*' element={<Error/>}/>
+        </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
-
