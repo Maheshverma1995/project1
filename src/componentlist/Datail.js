@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import abc from'../Picture/img5.jpg';
 
 const Datail = () => {
-    const myimg = "C:/Users/hp/Desktop/mahesh/project1/src/Picture/img.jpg";
+    const myimg = "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg";
     return (
         <div className='container-fluid'>
             <div className='row'>
