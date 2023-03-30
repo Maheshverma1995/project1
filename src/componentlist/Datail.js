@@ -1,45 +1,97 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import abc from'../Picture/img5.jpg';
 
-const Datail = () => {
-    const myimg = "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg";
-    return (
-        <div className='container-fluid'>
-            <div className='row'>
-                <div className='col-md-3'>
-                    <div className="card">
-                        <img src="image/img3.jpg" alt="noimage" />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <Link to="#" className="btn btn-primary">Go somewhere</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className='col-md-3'>
-                    <div className="card">
-                        <img src={abc} alt="noimage" />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <Link to="#" className="btn btn-primary">Go somewhere</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className='col-md-3'>
-                    <div className="card">
-                        <img src={myimg} alt="noimage" />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <Link to="#" className="btn btn-primary">Go somewhere</Link>
-                        </div>
-                    </div>
+function Datail() {
+    const mydata = [
+        {
+            ids: 1,
+            name: 'picname1',
+            url: 'https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg',
+            title: 'pppppppppppppppp',
+            pragraph: 'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuu u'
+        },
+        {
+            ids: 2,
+            name: 'picname1',
+            url: 'https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg',
+            title: 'pppppppppppppppp',
+            pragraph: 'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuu u'
+        },
+        {
+            ids: 3,
+            name: 'picname1',
+            url: 'https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg',
+            title: 'pppppppppppppppp',
+            pragraph: 'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuu u'
+        },
+        {
+            ids: 4,
+            name: 'picname1',
+            url: 'https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg',
+            title: 'pppppppppppppppp',
+            pragraph: 'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuu u'
+        },
+        {
+            ids: 5,
+            name: 'picname1',
+            url: 'https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg',
+            title: 'pppppppppppppppp',
+            pragraph: 'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuu u'
+        },
+        {
+            ids: 6,
+            name: 'picname1',
+            url: 'https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg',
+            title: 'pppppppppppppppp',
+            pragraph: 'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuu u'
+        },
+        {
+            ids: 7,
+            name: 'picname1',
+            url: 'https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg',
+            title: 'pppppppppppppppp',
+            pragraph: 'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuu u'
+        },
+        {
+            ids: 8,
+            name: 'picname1',
+            url: 'https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg',
+            title: 'pppppppppppppppp',
+            pragraph: 'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuu u'
+        },
+        {
+            ids: 9,
+            name: 'picname1',
+            url: 'https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg',
+            title: 'pppppppppppppppp',
+            pragraph: 'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuu u'
+        },
+    ];
+
+
+        return (
+            <div className='container-fluid'>
+                <div className='row'>
+                    {
+                        mydata.map((u) => {
+                            return (
+                                <div className='col-md-3'>
+                                    <div className="card">
+                                        <img src={u.url} alt="noimage" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">{u.title}</h5>
+                                            <p className="card-text">{u.pragraph}</p>
+                                            <Link to="#" className="btn btn-primary">{u.ids},{u.name}</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                        )
+                    }
                 </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
 
 export default Datail

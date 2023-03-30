@@ -2,12 +2,12 @@ import React from 'react'
 import { useState } from 'react';
 
 function Contactus() {
-  const [x, y] = useState(0);
+  const [x,y] = useState('0');
 
 
  const number1 = (r) => {
   console.log(r);
-    y(r.terget.value);
+    y(r.target.value);
  }
     return (
       <div>

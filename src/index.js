@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './componentlist/About';
+import Apidata from './componentlist/Apidata';
 import Contactus from './componentlist/Contactus';
 import Datail from './componentlist/Datail';
 import Error from './componentlist/Error';
@@ -23,6 +24,7 @@ root.render(
            <Route path='contact' element={<Contactus/>}/>
            <Route path='*' element={<Error/>}/>
            <Route path='datail' element={<Datail/>}/>
+           <Route path='apidata' element={<Apidata/>}/>
         </Routes>
     </BrowserRouter>
   </React.StrictMode>
