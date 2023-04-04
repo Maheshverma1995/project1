@@ -1,21 +1,27 @@
 import axios from 'axios';
 import React from 'react'
-import { useState } from 'react'
+import { useState ,useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 
 function Myaxiosdata() {
     const [apivariable, apifunction] = useState([]);
 
 
-    const apidata = () => {
-        axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => {
-            apifunction(res.data);
+    // const apidata = () => {
+    //     axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => {
+    //         apifunction(res.data);
 
+    //     })
+    // }
+    useEffect(()=>{
+        axios.get(`https://jsonplaceholder.typicode.com/posts`).then((res)=>{
+            apifunction(res.data);
         })
-    }
+    },[])
     return (
         <div>
-            <button type='button' onClick={apidata} > apidata</button>
+            {/* <button type='button' onClick={apidata} > apidata</button> */}
             <div className='container'>
                 <div className='row'>
                     {apivariable.map((a) => {
@@ -26,6 +32,7 @@ function Myaxiosdata() {
                                     <h3>{a.userId}</h3>
                                     <h5>{a.title}</h5>
                                     <p>{a.body}</p>
+                                    <Link class="btn btn-primary" to={`${a.id}`}>View Details</Link>
                                 </section>
                             </div>
                         )

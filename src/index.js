@@ -8,6 +8,8 @@ import Datail from './componentlist/Datail';
 import Error from './componentlist/Error';
 import Landingpage from './componentlist/Landingpage';
 import Mynav from './componentlist/Mynav';
+import Mychart from './componentlist/Mychart';
+import Detailspage from './componentlist/Detailspage';
 
 
 
@@ -24,7 +26,9 @@ root.render(
            <Route path='contact' element={<Contactus/>}/>
            <Route path='*' element={<Error/>}/>
            <Route path='datail' element={<Datail/>}/>
+           <Route path='mychart' element={<Mychart/>}/>
            <Route path='apidata' element={<Apidata/>}/>
+           <Route path='apidata/:id' element={<Detailspage/>}/>
         </Routes>
     </BrowserRouter>
   </React.StrictMode>

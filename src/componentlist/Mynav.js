@@ -39,6 +39,9 @@ function Mynav() {
           <li className="nav-item">
             <Link className="nav-link" to="apidata">Apidata</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="mychart">Mychart</Link>
+          </li>
         </ul>
         
         <form className="d-flex" role="search">
