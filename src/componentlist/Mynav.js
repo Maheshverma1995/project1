@@ -42,6 +42,9 @@ function Mynav() {
           <li className="nav-item">
             <Link className="nav-link" to="mychart">Mychart</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="login">Login</Link>
+          </li>
         </ul>
         
         <form className="d-flex" role="search">

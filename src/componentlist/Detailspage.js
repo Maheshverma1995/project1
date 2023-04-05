@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function Detailspage() {
     const [x ,y] = useState({});
-    let { id } = useParams();
+    let {id} = useParams();
     useEffect(() => {
         axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`).then((res) => {
             console.log(res.data);

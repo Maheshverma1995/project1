@@ -10,6 +10,8 @@ import Landingpage from './componentlist/Landingpage';
 import Mynav from './componentlist/Mynav';
 import Mychart from './componentlist/Mychart';
 import Detailspage from './componentlist/Detailspage';
+import Login from './componentlist/Login';
+import Registration from './componentlist/Registration'
 
 
 
@@ -29,6 +31,8 @@ root.render(
            <Route path='mychart' element={<Mychart/>}/>
            <Route path='apidata' element={<Apidata/>}/>
            <Route path='apidata/:id' element={<Detailspage/>}/>
+           <Route path='login' element={<Login/>}/>
+           <Route path='login/:registration' element={<Registration/>}/>
         </Routes>
     </BrowserRouter>
   </React.StrictMode>
